@@ -13,4 +13,4 @@ original creator: http://www.autohotkey.com/board/topic/104539-controlcol-set-ba
         btn := GuiObj.Add("Button",,"OK")
         ControlColor(btn, g, "red")
 ```
-![Screenshot 2023-07-24 212909](https://github.com/samfisherirl/ControlColor.ahk-v2/assets/98753696/8d03c6e8-77a1-45ce-8909-945394f57f02)
+![Screenshot 2023-07-24 212909](https://github.com/samfisherirl/ControlColor.ahk-v2/assets/98753696/beced863-99aa-4779-8b07-4a2df8989507)
