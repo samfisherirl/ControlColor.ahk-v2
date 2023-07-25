@@ -1,14 +1,13 @@
+﻿/*
 ; original creator:
 ; http://www.autohotkey.com/board/topic/104539-controlcol-set-background-and-text-color-gui-controls/
 ; u/anonymous1184 for ahkv2 translation
 
-/*
-    @example
-        btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, GuiObj, 0xFF0000)
-    @example
-        btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, GuiObj, "red")
+    @method ControlColor.SetAll(myGuiObj,"Black")
+        ; handles myGuiObj.BackColor := "Black"
+        ; sets button background, sets gui background
+    @method ControlColor(buttonObj,GuiObj,0xFF0000)
+    @method ControlColor(btn,GuiObj,"red")
         ; https://www.autohotkey.com/docs/v2/misc/Colors.htm
 */
 class ControlColor {
@@ -63,13 +62,24 @@ class ControlColor {
     }
     static HColors(userColor)
     {
-        Colors := Map("Black", 0x000000, "Silver", 0xC0C0C0, "Gray", 0x808080, "White", 0xFFFFFF, "Maroon", 0x800000, "Red", 0xFF0000, "Purple", 0x800080, "Fuchsia", 0xFF00FF, "Green", 0x008000, "Lime", 0x00FF00, "Olive", 0x808000, "Yellow", 0xFFFF00, "Navy", 0x000080, "Blue", 0x0000FF, "Teal", 0x008080, "Aqua", 0x00FFFF)
+        Colors := Map("Black", 0x000000, "Silver", 0xC0C0C0, "Gray", 0x808080, "White", 0xFFFFFF, "Maroon", 0x800000, "Red", 0xFF0000, 
+                    "Purple", 0x800080, "Fuchsia", 0xFF00FF, "Green", 0x008000, "Lime", 0x00FF00, "Olive", 0x808000, "Yellow", 0xFFFF00, 
+                    "Navy", 0x000080, "Blue", 0x0000FF, "Teal", 0x008080, "Aqua", 0x00FFFF)
         for color, code in Colors {
             if InStr(color, userColor) {
                 return code
             }
         }
         return false
+    }
+    static SetAll(g, color){
+        for index, guiItem in g {
+            if guiItem.Type = "Button" {
+            ControlColor(guiItem, g, color)
+            }
+        }
+        g.BackColor := color
+        sleep(1)
     }
 }
 
