@@ -6,31 +6,18 @@
 Persistent(true)
 g := Gui(, "Window " A_AhkVersion)
 btn := g.Add("Button", "w80 h23", "&OK")
-g.BackColor := "Black"
+btn2 := g.Add("Button", "w80 h23", "&OK")
+btn3 := g.Add("Button", "w80 h23", "&OK")
 ControlColor(btn, g, 0x000000)
-g.Show("x1000 y700 w100 ")
-
-g2 := Gui(, "Window " A_AhkVersion)
-btn2 := g2.Add("Button", "w80 h23", "&OK")
-ControlColor(btn2, g2, "Red")
-g2.BackColor := "Red"
-g2.Show("x1100 y700 w100 ")
-
-
-g1 := Gui(, "Window " A_AhkVersion)
-btn2 := g1.Add("Button", "w80 h23", "&OK")
-g1.BackColor := "Black"
-g1.Show("x1000 y800 w100 ")
-
-g3 := Gui(, "Window " A_AhkVersion)
-btn3 := g3.Add("Button", "w80 h23", "&OK")
-g3.BackColor := "FF0000"
-g3.Show("x1100 y800 w100 ")
-Exit()
+g.Show()
 /*
     @example
         btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn.hWnd, g.hWnd, 0xFF0000)
+        ControlColor(btn, g, 0xFF0000)
+    @example
+        btn := GuiObj.Add("Button",,"OK")
+        ControlColor(btn, g, "red")
+        ; https://www.autohotkey.com/docs/v2/misc/Colors.htm
 */
 class ControlColor {
     static Call(Control, Window, bc := "", tc := "", Redraw := true) 
@@ -91,5 +78,6 @@ class ControlColor {
             }
         }
         return false
-}   }
+    }
+}
 
