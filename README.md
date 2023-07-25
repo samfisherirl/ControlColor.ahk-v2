@@ -8,9 +8,9 @@ original creator: http://www.autohotkey.com/board/topic/104539-controlcol-set-ba
 ```autohotkey
     @example
         btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, g, 0xFF0000)
+        ControlColor(btn, GuiObj, 0xFF0000)
     @example
         btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, g, "red")
+        ControlColor(btn, GuiObj, "red")
 ```
 ![Screenshot 2023-07-24 212909](https://github.com/samfisherirl/ControlColor.ahk-v2/assets/98753696/beced863-99aa-4779-8b07-4a2df8989507)
