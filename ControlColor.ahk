@@ -40,7 +40,7 @@ class ControlColor {
                     DllCall("gdi32\SetBkColor", "Ptr", wParam, "UInt", bc)
                 }
                 return Win[hWnd][lParam].Brush ; return the HBRUSH to notify the OS that we altered the HDC.
-        }}
+        } }
         if (hWnd = "Set") {
             a := uMsg
             Win[a.g] := Map(a.c, a)
