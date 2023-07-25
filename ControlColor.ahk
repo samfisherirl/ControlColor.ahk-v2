@@ -1,7 +1,3 @@
-﻿; original creator:
-; http://www.autohotkey.com/board/topic/104539-controlcol-set-background-and-text-color-gui-controls/
-; u/anonymous1184 for ahkv2 translation
-
 ; original creator:
 ; http://www.autohotkey.com/board/topic/104539-controlcol-set-background-and-text-color-gui-controls/
 ; u/anonymous1184 for ahkv2 translation
