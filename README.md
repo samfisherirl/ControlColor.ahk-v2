@@ -1,6 +1,8 @@
 # ControlColor.ahk-v2
 Set background color for buttons and other controls in AHKv2 Gui's. 
 
+Credit to u/anonymous1184 for doing the heavy lifting on this one. https://www.reddit.com/r/AutoHotkey/comments/158ngog/need_help_converting_ahkv1_object_between_0x312/
+
 ```autohotkey
     @example
         btn := GuiObj.Add("Button",,"OK")
