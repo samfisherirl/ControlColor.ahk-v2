@@ -2,14 +2,10 @@
 ; http://www.autohotkey.com/board/topic/104539-controlcol-set-background-and-text-color-gui-controls/
 ; u/anonymous1184 for ahkv2 translation
 
-#Requires AutoHotkey v2.0
-Persistent(true)
-g := Gui(, "Window " A_AhkVersion)
-btn := g.Add("Button", "w80 h23", "&OK")
-btn2 := g.Add("Button", "w80 h23", "&OK")
-btn3 := g.Add("Button", "w80 h23", "&OK")
-ControlColor(btn, g, 0x000000)
-g.Show()
+; original creator:
+; http://www.autohotkey.com/board/topic/104539-controlcol-set-background-and-text-color-gui-controls/
+; u/anonymous1184 for ahkv2 translation
+
 /*
     @example
         btn := GuiObj.Add("Button",,"OK")
