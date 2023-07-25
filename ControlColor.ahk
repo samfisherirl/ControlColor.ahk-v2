@@ -5,10 +5,10 @@
 /*
     @example
         btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, g, 0xFF0000)
+        ControlColor(btn, GuiObj, 0xFF0000)
     @example
         btn := GuiObj.Add("Button",,"OK")
-        ControlColor(btn, g, "red")
+        ControlColor(btn, GuiObj, "red")
         ; https://www.autohotkey.com/docs/v2/misc/Colors.htm
 */
 class ControlColor {
