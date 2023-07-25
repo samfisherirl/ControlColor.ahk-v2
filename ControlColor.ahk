@@ -5,7 +5,7 @@
 
     @method ControlColor.SetAll(myGuiObj,"Black")
         ; handles myGuiObj.BackColor := "Black"
-        ; sets button background, sets gui background
+        ; sets all button background, sets gui background
     @method ControlColor(buttonObj,GuiObj,0xFF0000)
     @method ControlColor(btn,GuiObj,"red")
         ; https://www.autohotkey.com/docs/v2/misc/Colors.htm
